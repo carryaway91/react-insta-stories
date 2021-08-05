@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const StoryContainer = styled.div`
-    width: 1200px;
     height: 100vh;
     display: flex;
     justify-content: space-between;

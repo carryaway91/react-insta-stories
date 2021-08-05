@@ -9,21 +9,26 @@ export const Wrapper = styled.div`
     
     
     .previous {
-        left: -2rem
+        left: -.5rem
     }
     
     .next {
-        right: -2rem
+        right: -.5rem
     }
 `
 
 export const StoryContainer = styled.div<IProps>`
     position: relative;
     border-radius: .5rem;
-    width: ${props => props.prime ? '25vw' : '134px'};
-    height: ${props => props.prime ? '90vh' : '239px'}; 
+    width: ${props => props.prime ? '25vw' : '10vw'};
+    height: ${props => props.prime ? '90vh' : '40vh'}; 
     background: black;
     transition: all .2s ease-in-out;
+    margin: 0 2rem;
+    
+    @media(min-width: 1700px) {
+        width: ${props => props.prime ? '30vw' : '10vw'};
+    }
 `
 
 export const Btn = styled.div`

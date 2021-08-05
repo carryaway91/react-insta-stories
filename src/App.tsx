@@ -55,16 +55,20 @@ const App: React.FC = () => {
   useEffect(() => {
     s.current!.style.transitionProperty = 'all'
     s.current!.style.transitionDuration = '.4s'
-    s.current!.style.left = '0'
-    
+    s.current!.style.left = JSON.stringify(primeCoords)
+
   },[])
 
+  /**
+   * nastavenie hlavneho obrazka 
+   */
   const handleToPrime = (n: number) : void => {
     let index = prime - n
     if(index > 0) {
-      s.current!.style.left = JSON.stringify(parseInt(s.current!.style.left) + index * 16) + '%'
+
+     s.current!.style.left = JSON.stringify(parseInt(s.current!.style.left) + index * 14.4) + 'vw'
     } else {
-      s.current!.style.left = JSON.stringify(parseInt(s.current!.style.left) + (index * 16)) + '%'
+     s.current!.style.left = JSON.stringify(parseInt(s.current!.style.left) + (index * 14.4)) + 'vw'
     }
     setPrime(n)
   }
@@ -75,8 +79,8 @@ const App: React.FC = () => {
     if(s.current!.style.left === '') {
       currentPos = '0rem'
     } 
-    s.current!.style.left = parseInt(currentPos) + 16 + '%'
-    currentPos = parseInt(currentPos) + 16 + '%'
+    s.current!.style.left = parseInt(currentPos) + 14.4 + 'vw'
+    currentPos = parseInt(currentPos) + 14.4 + 'vw'
     setPrime(prev => { return prev - 1 })
   }
   
@@ -85,8 +89,9 @@ const App: React.FC = () => {
     if(s.current!.style.left === '') {
       currentPos = '0rem'
     } 
-    s.current!.style.left = parseInt(currentPos) - 16 + '%'
-    currentPos = parseInt(currentPos) - 16 + '%'
+
+    s.current!.style.left = parseInt(currentPos) - 14.4 + 'vw'
+    currentPos = parseInt(currentPos) - 14.4 + 'vw'
     setPrime(prev => { return prev + 1 })
   }
 
