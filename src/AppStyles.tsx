@@ -1,23 +1,25 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const StoryContainer = styled.div`
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-`
-export const Wrapper = styled.div`
-    width: 100vw;
-    position: relative;
-    justify-content: center;
-    display: flex;
-    transition: all .45s ease-in-out;
-    
-    .previous {
-        left: -2rem
-    }
-    
-    .next {
-        right: -2rem
-    }
-`
+export const Wrapper = styled.div<{ scroll: boolean }>`
+  min-height: ${(props) => (props.scroll ? "100vh" : "100vh")};
+  height: ${(props) => (props.scroll ? "100vh" : "")};
+  background: #fafafa;
+  overflow-y: hidden;
+`;
+
+export const Content = styled.div`
+  margin: 0 auto;
+  width: 800px;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+`;
+
+export const StoriesContainer = styled.div`
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  background: black;
+  z-index: 1111111;
+  overflow: hidden;
+`;
