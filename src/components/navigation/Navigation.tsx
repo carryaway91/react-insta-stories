@@ -4,6 +4,7 @@ import ProfilePic from "../profile-pic/ProfilePic";
 import { AddPost } from "./add-post/AddPost";
 import { Home } from "./home/Home";
 import { Magnifier } from "./magnifier/Magnifier";
+import { NavContext } from "./navigation-context/NavContext";
 import {
   Close,
   Input,
@@ -69,7 +70,10 @@ const Navigation: React.FC<{ onShowUpload: () => void }> = ({
               <Link to="/">
                 <Home clicked={() => alert("home")} />
               </Link>
-              <AddPost active={addPostActive} clicked={onUpload} />
+              <div className="flex col" style={{ position: "relative" }}>
+                <AddPost active={addPostActive} clicked={onUpload} />
+                <NavContext>Add a new post</NavContext>
+              </div>
               <ProfilePic w={33} hasStory={false} />
             </div>
           </Nav>
