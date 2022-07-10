@@ -8,10 +8,6 @@ export const Wrapper = styled.div`
     display: flex;
     margin-left: 0.4rem;
     flex-direction: column;
-    .name {
-      font-size: 0.8rem;
-      font-weight: bold;
-    }
     p {
       color: gray;
       font-size: 0.8rem;

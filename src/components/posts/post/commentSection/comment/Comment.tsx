@@ -5,7 +5,7 @@ interface IProps {
 export const Comment: React.FC<IProps> = ({ data }) => {
   return (
     <div className="flex">
-      <strong>{data.name}</strong>&nbsp;<p>{data.text}</p>
+      <h4>{data.name}</h4>&nbsp;<p>{data.text}</p>
     </div>
   );
 };

@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
 
-  h4 {
+  .suggestionHeader {
     color: gray;
     margin: 1rem 0 1rem 0.5rem;
   }

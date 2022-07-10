@@ -13,7 +13,7 @@ export const SuggestionSection: React.FC = () => {
 
   return (
     <Wrapper>
-      <h4>Suggestions For You</h4>
+      <h4 className="suggestionHeader">Suggestions For You</h4>
       {sugg && sugg.map((s: string) => <SuggestionItem data={s} />)}
     </Wrapper>
   );

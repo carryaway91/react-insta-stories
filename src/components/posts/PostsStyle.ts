@@ -10,8 +10,7 @@ export const Wrapper = styled.div`
   margin: 1rem 0;
 `;
 
-export const Nickname = styled.p`
-  font-weight: bold;
+export const Nickname = styled.h4`
   font-size: 0.9rem;
   margin-left: 0.5rem;
 `;

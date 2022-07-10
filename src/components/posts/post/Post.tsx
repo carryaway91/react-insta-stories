@@ -78,15 +78,11 @@ export const Post: React.FC<IProps> = ({ photos, idx }) => {
             />
           )}
         </div>
-        {!liked && (
-          <strong style={{ padding: "0 0 .7rem 0" }}>
-            Be first one to like!
-          </strong>
-        )}
-        {liked && <strong style={{ padding: "0 0 .7rem 0" }}>1 like</strong>}
+        {!liked && <h4>Be first one to like!</h4>}
+        {liked && <h4>1 like</h4>}
         <div>
           <p>
-            <strong>carryshout</strong>&nbsp;Some comment
+            <h4 style={{ display: "inline" }}>carryshout</h4>&nbsp;Some comment
           </p>
         </div>
         <CommentSection comments={comments} />

@@ -10,7 +10,7 @@ export const SuggestionItem: React.FC<IProps> = ({ data }) => {
       <div className="flex">
         <ProfilePic hasStory={false} w={38} />
         <div id="inner">
-          <h5 className="name">{data}</h5>
+          <h4>{data}</h4>
           <p>Suggested for you</p>
         </div>
       </div>

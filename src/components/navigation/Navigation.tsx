@@ -13,6 +13,7 @@ import {
   SearchInput,
   Wrapper,
 } from "./NavigationStyles";
+import SearchContext from "./search-context/SearchContext";
 
 const Navigation: React.FC<{ onShowUpload: () => void }> = ({
   onShowUpload,
@@ -21,6 +22,7 @@ const Navigation: React.FC<{ onShowUpload: () => void }> = ({
   const [showClose, setShowClose] = useState(false);
   const [inputVal, setInputVal] = useState("");
   const [addPostActive, setAddPostActive] = useState(false);
+  const [showSearchContext, setShowSearchContext] = useState(false);
 
   useEffect(() => {
     if (inputVal !== "") {
@@ -32,6 +34,16 @@ const Navigation: React.FC<{ onShowUpload: () => void }> = ({
 
   const onUpload = () => {
     onShowUpload();
+  };
+
+  const handleOnFocus = () => {
+    setShowMagnifier(false);
+    setShowSearchContext(true);
+  };
+
+  const handleOnBlur = () => {
+    setShowMagnifier(true);
+    setShowSearchContext(false);
   };
 
   return (
@@ -54,9 +66,10 @@ const Navigation: React.FC<{ onShowUpload: () => void }> = ({
             <SearchInput>
               {showMagnifier && <Magnifier />}
               <Input
+                onClick={(e) => e.stopPropagation()}
                 placeholder="Search"
-                onFocus={() => setShowMagnifier(false)}
-                onBlur={() => setShowMagnifier(true)}
+                onFocus={() => handleOnFocus()}
+                onBlur={() => handleOnBlur()}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setInputVal(e.target.value)
                 }
@@ -65,6 +78,7 @@ const Navigation: React.FC<{ onShowUpload: () => void }> = ({
               {showClose && (
                 <Close onClick={() => setInputVal("")}>&#10006;</Close>
               )}
+              <SearchContext show={showSearchContext} />
             </SearchInput>
             <div className="flex a-cen">
               <Link to="/">

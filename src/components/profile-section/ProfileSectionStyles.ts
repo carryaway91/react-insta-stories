@@ -14,9 +14,7 @@ export const Inner = styled.div`
   justify-content: center;
 `;
 
-export const Nickname = styled.p`
-  font-weight: bold;
-`;
+export const Nickname = styled.h4``;
 
 export const Name = styled.p`
   color: gray;
