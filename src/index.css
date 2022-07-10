@@ -29,6 +29,7 @@ p {
   justify-content: space-between;
 }
 
+
 .col {
   flex-direction: column;
 }

@@ -20,6 +20,7 @@ import { Content, StoriesContainer, Wrapper } from "./AppStyles";
 import Navigation from "./components/navigation/Navigation";
 import { UploadModal } from "./components/uploadModal/UploadModal";
 import { Overlay } from "./components/uploadModal/UploadModalStyles";
+import Profile from "./containers/profile/Profile";
 
 const App: React.FC = () => {
   const [uploadModal, setUploadModal] = useState(false);
@@ -61,6 +62,7 @@ const App: React.FC = () => {
       <Content>
         <Routes>
           <Route path="/" element={<Feed />}></Route>
+          <Route path="/carryshout" element={<Profile />}></Route>
         </Routes>
       </Content>
       <StoriesContainer>

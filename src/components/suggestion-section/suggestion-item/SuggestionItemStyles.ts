@@ -15,10 +15,9 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Follow = styled.p`
+export const Follow = styled.h4`
   font-size: 0.8rem;
   color: #0095f6;
-  font-weight: bold;
   align-self: center;
   position: relative;
 `;

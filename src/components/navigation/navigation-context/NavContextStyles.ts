@@ -24,5 +24,5 @@ export const Wrapper = styled.div`
   left: -100%;
   text-align: center;
   white-space: nowrap;
-  animation: ${alarm} 0.3s 0.5s ease-in-out 3;
+  animation: ${alarm} 0.2s 0.5s ease-in-out 3;
 `;

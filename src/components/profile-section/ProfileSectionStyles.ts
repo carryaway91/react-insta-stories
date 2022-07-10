@@ -19,9 +19,8 @@ export const Nickname = styled.h4``;
 export const Name = styled.p`
   color: gray;
 `;
-export const Switch = styled.p`
+export const Switch = styled.h4`
   font-size: 0.8rem;
   color: #0095f6;
-  font-weight: bold;
   align-self: center;
 `;

@@ -16,7 +16,12 @@ const SearchContext: React.FC<{ show: boolean }> = ({ show }) => {
 
   useEffect(() => {
     if (show) {
-      $("#searchContext").css({ display: "flex", opacity: 1, top: "2.85rem" });
+      $("#searchContext").css({
+        display: "flex",
+        opacity: 1,
+        top: "2.85rem",
+        zIndex: 2,
+      });
     }
   }, [show]);
   return (
