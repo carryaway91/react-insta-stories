@@ -13,6 +13,8 @@ import {
   SearchInput,
   Wrapper,
 } from "./NavigationStyles";
+import Me from "../../img/profilePics/me.jpg";
+
 import SearchContext from "./search-context/SearchContext";
 
 const Navigation: React.FC<{ onShowUpload: () => void }> = ({
@@ -88,7 +90,7 @@ const Navigation: React.FC<{ onShowUpload: () => void }> = ({
                 <AddPost active={addPostActive} clicked={onUpload} />
                 <NavContext>Add a new post</NavContext>
               </div>
-              <ProfilePic w={33} hasStory={false} />
+              <ProfilePic pic={Me} w={33} hasStory={false} />
             </div>
           </Nav>
           <div className="nav-fill" />

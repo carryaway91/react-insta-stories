@@ -5,15 +5,16 @@ import { Link } from "react-router-dom";
 interface IProps {
   w: number;
   hasStory: boolean;
+  pic: string;
 }
 
-const ProfilePic: React.FC<IProps> = ({ w, hasStory }) => {
+const ProfilePic: React.FC<IProps> = ({ pic, w, hasStory }) => {
   return (
     <Wrapper hasStory={hasStory} w={w}>
       {hasStory && (
         <Link to="/stories">
           <Inner w={w}>
-            <Img src={Pic} w={w} />
+            <Img src={pic} w={w} />
             {hasStory && <StoryCircle w={w}></StoryCircle>}
           </Inner>
         </Link>
@@ -21,7 +22,7 @@ const ProfilePic: React.FC<IProps> = ({ w, hasStory }) => {
 
       {!hasStory && (
         <Inner w={w}>
-          <Img src={Pic} w={w} />
+          <Img src={pic} w={w} />
           {hasStory && <StoryCircle w={w}></StoryCircle>}
         </Inner>
       )}

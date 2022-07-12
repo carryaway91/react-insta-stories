@@ -10,6 +10,7 @@ import bookmark from "../../../img/icons/bookmark-white.png";
 import bookmarkBlack from "../../../img/icons/bookmark.png";
 import { CommentSection } from "./commentSection/CommentSection";
 import { AddComment } from "./addComment/AddComment";
+import Person from "../../../img/profilePics/me.jpg";
 
 interface IProps {
   photos: String[];
@@ -32,7 +33,7 @@ export const Post: React.FC<IProps> = ({ photos, idx }) => {
   return (
     <React.Fragment>
       <div className="flex" style={{ margin: ".5rem" }}>
-        <ProfilePic hasStory={true} w={30} />
+        <ProfilePic pic={Person} hasStory={false} w={30} />
         <Nickname>carryshout</Nickname>
       </div>
       <PhotoSlider

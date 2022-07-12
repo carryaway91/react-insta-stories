@@ -21,6 +21,7 @@ export const Inner = styled.div<{ w: number }>`
 `;
 
 export const Img = styled.img<{ w: number }>`
+  object-fit: cover;
   width: 86%;
   height: 86%;
   align-items: center;

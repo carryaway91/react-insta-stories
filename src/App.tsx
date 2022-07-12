@@ -62,7 +62,6 @@ const App: React.FC = () => {
       <Content>
         <Routes>
           <Route path="/" element={<Feed />}></Route>
-          <Route path="/carryshout" element={<Profile />}></Route>
         </Routes>
       </Content>
       <StoriesContainer>

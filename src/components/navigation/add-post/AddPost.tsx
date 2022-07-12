@@ -1,3 +1,4 @@
+import { relative } from "path";
 import React from "react";
 
 export const AddPost: React.FC<{ clicked: () => void; active: boolean }> = ({
@@ -8,7 +9,7 @@ export const AddPost: React.FC<{ clicked: () => void; active: boolean }> = ({
     <React.Fragment>
       {!active && (
         <svg
-          style={{ marginRight: "1rem" }}
+          style={{ marginRight: ".7rem", position: "relative", top: "-1px" }}
           onClick={clicked}
           cursor={`pointer`}
           aria-label="New post"
